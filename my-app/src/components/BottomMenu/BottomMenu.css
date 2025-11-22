@@ -1,0 +1,137 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  background-color: #000;
+}
+
+/* Background e Overlay */
+.bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* O gradiente do design parece ser mais sutil na parte superior e escuro embaixo */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 90%);
+}
+
+/* Conteúdo Principal */
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 24px 0 24px;
+  /* Aumentei o padding top para descer o texto */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  margin-bottom: 50px;
+  /* Mais espaço entre título e números */
+}
+
+.header p {
+  font-size: 2.2rem;
+  /* "Olá," bem maior */
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.header h1 {
+  font-size: 3.2rem;
+  /* "Chopp 5Beer" gigante */
+  font-weight: 700;
+  /* Bold */
+  line-height: 1.1;
+}
+
+/* Lista de Estatísticas */
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  /* Espaço entre as linhas (+40, +12...) */
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  /* Ajuste o gap para definir a distância fixa entre o fim do número e o texto */
+  gap: 15px;
+}
+
+.stat-number {
+  /* 1. Largura Fixa: Definimos um tamanho que caiba o maior número (+88) com folga */
+  width: 150px;
+
+  /* 2. Alinhamento à Direita: O número cresce para a esquerda, mantendo o texto fixo na direita */
+  text-align: right;
+
+  /* 3. Tabular Nums: Faz todos os números terem a mesma largura (evita tremedeira) */
+  font-variant-numeric: tabular-nums;
+
+  font-size: 5.5rem;
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -3px;
+}
+
+/* Componente span dentro do counter (para garantir estilo) */
+.stat-number span {
+  display: block;
+}
+
+.stat-label {
+  font-size: 2rem;
+  /* Texto lateral bem grande também (aprox 32px) */
+  font-weight: 400;
+  line-height: 1.1;
+  /* Entrelinha apertada para "clientes atendidos" ficarem juntos */
+}
+
+.logo-item {
+  width: auto;
+  /* Permite que ele ocupe o espaço necessário */
+
+  /* O SEGREDO: Adicionar margem embaixo empurra o item para CIMA */
+  margin-bottom: 2.5px;
+}
+
+.bottom-nav {
+  /* ... outras propriedades ... */
+
+  /* Mude de 70px para 60px ou 55px */
+  height: 60px;
+
+  /* Se quiser ajustar o alinhamento interno, mexa no padding */
+  padding-bottom: 0px;
+  border-top-left-radius: 0px;
+  /* Tente aumentar para 30px ou 40px */
+  border-top-right-radius: 0px;
+  /* Mantenha igual ao de cima */
+}

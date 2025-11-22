@@ -1,0 +1,197 @@
+/* ============================================================
+   RESET & ESTRUTURA BASE
+   ============================================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Garante que o corpo do site nunca tenha scroll */
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Força a altura exata da tela */
+    overflow: hidden;
+    /* Corta qualquer excesso */
+    color: white;
+    background-color: #000;
+}
+
+/* ============================================================
+   BACKGROUND
+   ============================================================ */
+.bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+/* ============================================================
+   CONTEÚDO PRINCIPAL (FLEXBOX MÁGICO)
+   ============================================================ */
+.content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    /* Ocupa toda a altura disponível */
+    width: 100%;
+    padding: 0 24px;
+    /* Padding lateral apenas */
+
+    /* O SEGREDO DO ALINHAMENTO SEM SCROLL: */
+    display: flex;
+    flex-direction: column;
+
+    /* 'center' agrupa tudo no meio verticalmente. 
+     Se preferir espalhado, use 'space-evenly' */
+    justify-content: center;
+
+    /* Empurra o conteúdo para cima para não bater no Footer Fixo */
+    padding-bottom: 90px;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header {
+    /* Removemos margens gigantes. O flexbox vai controlar o espaço */
+    margin-bottom: 4vh;
+    margin-top: -200px;
+    /* Pequena distância flexível (4% da altura) */
+}
+
+.header p {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    /* Remove espaços extras */
+}
+
+.header h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* ============================================================
+   LISTA DE ESTATÍSTICAS
+   ============================================================ */
+.stats-list {
+    display: flex;
+    flex-direction: column;
+
+    /* Gap flexível: se a tela for pequena, o espaço diminui */
+    gap: 3vh;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* MANTENDO A SUA PROPORÇÃO MATEMÁTICA (2 linhas texto = 1 número) */
+/* Usei 'clamp' para que, se o celular for MUITO pequeno, a fonte diminua 
+   levemente para não estourar a tela, mas mantenha o tamanho ideal em telas normais */
+
+.stat-number {
+    /* Mínimo 4rem, Ideal 5.5rem, Máximo 15vw */
+    font-size: clamp(4rem, 5.5rem, 12vh);
+    font-weight: 400;
+    line-height: 0.8;
+    letter-spacing: -3px;
+    min-width: 130px;
+}
+
+.stat-number span {
+    display: block;
+}
+
+.stat-label {
+    /* Proporção mantida: aprox 40% do número */
+    font-size: clamp(1.6rem, 2.2rem, 5vh);
+    font-weight: 400;
+    line-height: 1.0;
+    /* Mantém as linhas coladas */
+}
+
+/* ============================================================
+   BARRA DE NAVEGAÇÃO
+   ============================================================ */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Ajustei levemente para caber 2 linhas de texto se precisar */
+    background-color: white;
+    
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+    display: flex;
+    justify-content: space-around; /* Distribui igualmente */
+    align-items: center;
+    
+    z-index: 10;
+    color: #333;
+    
+    /* Sombra suave na barra toda para destacar do fundo */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente */
+    
+    /* Largura máxima para o texto quebrar linha se for muito grande */
+    width: 70px; 
+    cursor: pointer;
+}
+
+/* Estilo do texto */
+.nav-item span {
+    font-size: 0.65rem; /* Fonte ligeiramente menor para caber "Novo romaneio" */
+    font-weight: 600;
+    margin-top: 4px;
+    text-align: center; /* Importante para centralizar texto de 2 linhas */
+    line-height: 1.1;
+}
+
+/* Ícones padronizados */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* ============================================================
+   SEÇÃO DELETADA:
+   Pode apagar as classes .center-btn-wrapper e .floating-btn
+   Elas não são mais necessárias.
+   ============================================================ */
