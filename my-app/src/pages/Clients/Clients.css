@@ -1,0 +1,132 @@
+/* Container Principal Travado */
+.page-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  /* Ocupa a tela inteira visível */
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #F8F9FA;
+  /* Fundo cinza claro */
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  /* Trava o scroll geral */
+  z-index: 1;
+}
+
+/* Header (Componente HeaderMain) */
+.header-main-page {
+  flex-shrink: 0;
+  height: 70px;
+  background-color: #FFFFFF;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  z-index: 10;
+}
+
+/* Estilos de Slots e Título (do HeaderMain) */
+.header-title-main {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 auto;
+  flex-grow: 1;
+  text-align: left;
+  /* Alinhado à esquerda na listagem */
+}
+
+.header-slot {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-action-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+/* --- Lista Rolável (Miolo) --- */
+.client-list {
+  flex: 1;
+  /* Ocupa todo o espaço restante entre Header e Footer */
+  overflow-y: auto;
+  padding: 20px 24px;
+  /* Padding interno */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Espaço entre os cards */
+
+  padding-bottom: 100px;
+  /* Espaço para o Menu Fixo */
+
+  /* Esconde barra de scroll */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.client-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.client-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between; /* Informação na esq, botão na dir */
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+/* Textos do card */
+.client-info {
+  flex: 1;
+  cursor: pointer;
+}
+
+.client-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.client-info p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Botão de deletar (lixeira) */
+.delete-btn {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
+
+/* Espaçador final (Necessário no Clients.jsx) */
+.spacer {
+  height: 100px;
+  width: 100%;
+  flex-shrink: 0;
+}

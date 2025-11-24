@@ -1,0 +1,49 @@
+/* Barra superior branca, igual ao Figma */
+.header-sub-page {
+    flex-shrink: 0;
+    height: 70px;
+    background-color: #ffffff;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    z-index: 10;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Slots laterais para alinhamento óptico do título */
+.header-slot {
+    width: 32px;
+    /* largura fixa para esquerda e direita */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-left {
+    justify-content: flex-start;
+}
+
+.header-right-spacer {
+    justify-content: flex-end;
+}
+
+/* Título central */
+.header-title {
+    margin: 0 auto;
+    flex-grow: 1;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+}
+
+/* Ícone de voltar */
+.header-icon {
+  width: 15px;  /* tamanho ideal para mobile compacto */
+  height: 15px;
+  cursor: pointer;
+}

@@ -34,7 +34,7 @@ const BottomMenu = () => {
       </div>
 
       {/* 4. Histórico */}
-      <div className="nav-item" onClick={() => navigate('/historico')}>
+      <div className="nav-item" onClick={() => navigate('/romaneios')}>
         <img src={iconHistory} alt="Histórico" className="nav-icon" />
         <span>Histórico</span>
       </div>

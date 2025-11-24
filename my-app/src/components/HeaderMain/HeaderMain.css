@@ -1,0 +1,51 @@
+.header-main-page {
+    flex-shrink: 0;
+    height: 70px;
+    background-color: #FFFFFF;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 15px;
+    /* Espaço entre a seta e o título */
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    z-index: 10;
+}
+
+/* Slots laterais */
+.header-slot {
+    width: 0px;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Ícone de ação alinha à direita */
+}
+
+.header-left-spacer {
+    width: 30px;
+    /* Largura fixa para equilibrar o lado direito */
+}
+
+/* Título Central */
+.header-title-main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+
+    /* 1. ANULA O ESPAÇADOR ESQUERDO */
+    /* Usamos -30px para compensar a largura de 30px do slot esquerdo */
+    margin: 0 auto;
+
+    flex-grow: 1;
+    text-align: left;
+}
+
+.header-action-icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}

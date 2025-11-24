@@ -1,0 +1,70 @@
+.company-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.company-description {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.company-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section-title {
+  margin: 16px 0 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.form-input {
+  margin-top: 4px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-row .form-label {
+  flex: 1;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #111827;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}

@@ -1,0 +1,87 @@
+/* Reaproveita o .page-container que você já usa em Clients.css */
+
+/* Área de conteúdo rolável abaixo do header */
+.new-client-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 24px 0 24px;
+    box-sizing: border-box;
+}
+
+/* Formulário principal */
+.new-client-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Títulos de seção ("Endereço") */
+.section-title {
+    margin: 16px 0 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Label + input empilhados */
+.form-label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Inputs */
+.form-input {
+    margin-top: 4px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #d0d0d0;
+    background-color: #ffffff;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.form-row {
+    display: flex;
+    gap: 12px;
+    /* espaço fixo entre Número e CEP */
+}
+
+.form-row .form-label {
+    flex: 1 1 0;
+    /* cada label ocupa metade do espaço que sobrar */
+}
+
+
+.form-row .form-label:first-child {
+    flex: 1;
+    /* Número ocupa mais espaço */
+}
+
+.form-row .form-label:last-child {
+    width: 155px;
+    /* largura ideal para CEP */
+}
+
+/* Botão principal */
+.btn-primary {
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: #111827;
+    /* quase preto, combinando com o app */
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.05);
+}
